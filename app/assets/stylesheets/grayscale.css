@@ -84,7 +84,7 @@ a:focus {
   transition: background 0.3s ease-in-out;
 }
 .navbar-custom .nav li a:hover {
-  color: green;
+  color: black;
   outline: none;
   background-color: transparent;
 }
@@ -166,17 +166,16 @@ a:focus {
   border: 2px solid white;
   border-radius: 100% !important;
   font-size: 40px;
-  color: white;
-  background: transparent;
+  color: #00DAFB;
+  background: orange;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
-.btn-circle:hover,
-.btn-circle:focus {
+.btn-circle:hover{
   outline: none;
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
+  color: orange;
+  background: #00DAFB;
 }
 .btn-circle i.animated {
   -webkit-transition-property: -webkit-transform;
@@ -254,7 +253,6 @@ a:focus {
   }
 }
 .btn {
-  text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   -webkit-transition: all 0.3s ease-in-out;
@@ -264,11 +262,10 @@ a:focus {
 }
 .btn-default {
   border: 1px solid #42DCA3;
-  color: #42DCA3;
-  background-color: transparent;
+  color: orange;
+  background-color: rgba(66, 113, 220, 0.86);
 }
-.btn-default:hover,
-.btn-default:focus {
+.btn-default:hover{
   border: 1px solid #42DCA3;
   outline: none;
   color: black;
@@ -294,6 +291,7 @@ ul.banner-social-buttons {
 }
 footer {
   padding: 50px 0;
+  background-color: #00DBFB;
 }
 footer p {
   margin: 0;
@@ -316,4 +314,9 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-login-fb {
+  color: #B7EAFF;
+  background-color: #FFA500;
 }

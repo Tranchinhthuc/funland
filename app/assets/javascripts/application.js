@@ -13,4 +13,6 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
+//= require summernote
+//= require summer_note
 //= require_tree .
