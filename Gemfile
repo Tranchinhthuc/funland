@@ -68,3 +68,6 @@ gem 'social-share-button'
 gem 'knockoutjs-rails'
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+gem 'config'
+gem "i18n-js", ">= 3.0.0.rc11"
+gem "awesome_print"

@@ -14,5 +14,7 @@
  *= require grayscale
  *= require font-awesome
  *= require active_admin/editor/wysiwyg
+ *= require fbtemplate
+ *= require articles
  *= require_self
  */

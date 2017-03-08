@@ -1,0 +1,25 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.article-item {
+  border-style: outset;
+  margin-bottom: 10px;
+  .title {
+    font-size: 30px;
+  }
+  .title:hover {
+    color: blue;
+  }
+  .author{
+    padding-left: 20px;
+    color: #b8acac;
+  }
+  .sort-content {
+    text-indent: 20px;
+    font-size: 20px;
+    a {
+      text-decoration: underline;
+      font-size: 15px;
+    }
+  }
+}

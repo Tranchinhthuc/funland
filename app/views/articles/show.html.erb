@@ -1,0 +1,22 @@
+<div class="col-md-12">
+    <div class="article-item">
+      <%= link_to @article.title.capitalize, article_path(@article), class: "title text-primary" %> <br>
+      <span class="author">
+        <%= t("posted_by") %>
+
+        <%= link_to @article.author_name, "#" %>
+      </span>
+      <span class="sort-content">
+        <%= @article.content.html_safe %>
+      </span>
+    </div>
+
+    <div class="related-box">
+      <%= t("related_artiles") %>:
+      <ul>
+        <% @articles.each do |article| %>
+          <li><%= link_to article.title.capitalize, article_path(article), class: "title text-primary" %> </li>
+        <% end %>
+      </ul>
+    </div>
+</div>

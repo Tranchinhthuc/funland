@@ -1,0 +1,9 @@
+vi:
+  welcome: Chao mung den voi
+  time:
+   formats:
+     long: "%Y-%m-%d %H:%M:%S"
+  logout: Dang xuat
+  posted_by: Duoc dang boi
+  read_more: Chi tiet
+  related_artiles: Cac bai viet lien quan

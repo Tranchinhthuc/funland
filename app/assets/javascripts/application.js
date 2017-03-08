@@ -15,4 +15,5 @@
 //= require jquery_ujs
 //= require summernote
 //= require summer_note
+//= require i18n/translations
 //= require_tree .

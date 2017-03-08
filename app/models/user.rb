@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :rememberable, :recoverable,
          :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
+  has_many :articles, as: :author
+
   # enum role: {
   #   admin: 1,
   #   normal: 2

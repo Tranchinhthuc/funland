@@ -31,13 +31,6 @@ p {
   font-size: 18px;
   line-height: 1.5;
 }
-@media (min-width: 768px) {
-  p {
-    margin: 0 0 35px;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-}
 a {
   color: #42DCA3;
   -webkit-transition: all 0.2s ease-in-out;
@@ -125,7 +118,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: orange;
-  background: url(kidsbg.jpg) no-repeat bottom center scroll;
+  background: url(kidsbg.jpg) repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -133,9 +126,6 @@ a:focus {
   -o-background-size: cover;
 }
 
-#about {
-  /*background: url(kidsbg.jpg) no-repeat bottom center scroll;*/
-}
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
@@ -223,12 +213,14 @@ a:focus {
 }
 .content-section {
   padding-top: 100px;
+  width: 100%;
+  /*background: url(kidsbg.jpg) no-repeat center scroll;*/
 }
 .download-section {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(downloads-bg.jpg) no-repeat center center scroll;
+  background: url(kidsbg.jpg) no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -291,17 +283,12 @@ ul.banner-social-buttons {
 }
 footer {
   padding: 50px 0;
-  background-color: #00DBFB;
+  background-color: #ccc;
 }
 footer p {
   margin: 0;
 }
 ::-moz-selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-}
-::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);

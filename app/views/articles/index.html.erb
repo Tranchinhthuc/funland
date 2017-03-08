@@ -1,0 +1,16 @@
+<div class="col-md-12">
+  <% @articles.each do |article| %>
+    <div class="article-item">
+      <%= link_to article.title.capitalize, article_path(article), class: "title text-primary" %> <br>
+      <span class="author">
+        <%= t("posted_by") %>
+
+        <%= link_to article.author_name, "#" %>
+      </span>
+      <span class="sort-content">
+        <%= article.content.first(100).html_safe %>...
+        <%= link_to t("read_more"), article_path(article), class: "title text-primary" %> <br>
+      </span>
+    </div>
+  <% end %>
+</div>
