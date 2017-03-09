@@ -4,7 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :rememberable, :recoverable,
          :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
-  has_many :articles, as: :author
+  has_many :articles, as: :author, dependent: :destroy
+  has_many :student_words, foreign_key: "student_id"
+  has_many :words, through: :student_words
+  has_many :lessons, through: :student_lessons, dependent: :destroy
+  has_many :student_lessons, foreign_key: "student_id"
 
   # enum role: {
   #   admin: 1,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170308014839) do
+ActiveRecord::Schema.define(version: 20170308100553) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -52,6 +52,33 @@ ActiveRecord::Schema.define(version: 20170308014839) do
     t.datetime "updated_at",                null: false
   end
 
+  create_table "lessons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.integer  "level"
+    t.integer  "age"
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "student_lessons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "student_id"
+    t.integer  "lesson_id"
+    t.integer  "progress"
+    t.datetime "last_learned_at"
+    t.integer  "learned_count"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "student_words", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "student_id"
+    t.integer  "word_id"
+    t.integer  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "avatar"
     t.datetime "created_at",                          null: false
@@ -73,6 +100,21 @@ ActiveRecord::Schema.define(version: 20170308014839) do
     t.string   "full_name"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "word_lessons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "word_id"
+    t.integer  "lesson_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "words", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "origin"
+    t.string   "meaning"
+    t.string   "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
