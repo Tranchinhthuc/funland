@@ -1672,6 +1672,10 @@ $( document ).ready(function() {
       $('[data-toggle="popover"]').popover('hide');
     });
 
+    $('.popover').on("tap",function(){
+      $('[data-toggle="popover"]').popover('hide');
+    });
+
     $('[data-toggle="popover"]').on('click', function (e) {
         //only buttons
         if ($(e.target).data('toggle') !== 'popover' && $(e.target).parents('.popover.in').length === 0) {
