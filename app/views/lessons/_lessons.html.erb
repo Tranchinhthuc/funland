@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-ms-10">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Name of lesson</th>
+            <th>Age</th>
+            <th>Level</th>
+            <th>Progress(%)</th>
+            <th>Last accessed at</th>
+            <th>Accessed count</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @lessons.each do |lesson| %>
+            <% student_lesson = @student_lessons.find{|sl| sl.lesson == lesson } %>
+            <tr class=<%= css_class_by_progress student_lesson.progress %>>
+              <td><%= lesson.name %></td>
+              <td><%= Lesson.age_to_string lesson.age.to_sym %></td>
+              <td><%= Lesson.level_to_string lesson.level.to_sym %></td>
+              <td><%= student_lesson.progress %></td>
+              <td><%= student_lesson.last_learned_at %></td>
+              <td><%= student_lesson.learned_count %></td>
+              <td>
+                <%= link_to "Learned now!", lesson_path(lesson), class: "btn btn-success btn-flat" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
+</div>

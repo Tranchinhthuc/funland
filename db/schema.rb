@@ -74,9 +74,9 @@ ActiveRecord::Schema.define(version: 20170308100553) do
   create_table "student_words", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "student_id"
     t.integer  "word_id"
-    t.integer  "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "status",     default: 1, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(version: 20170308100553) do
     t.string   "origin"
     t.string   "meaning"
     t.string   "picture"
+    t.string   "audio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

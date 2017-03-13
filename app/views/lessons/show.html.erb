@@ -1,0 +1,8 @@
+<% @lesson.words.each do |word| %>
+  <%= image_tag(word.picture.url(:thumb)) %>
+  <%= audio_tag(word.audio, controls: true) %>
+  <%= word.origin %>:
+  <%= word.meaning %>
+  <%= link_to "Got it", "#" %>
+  <br>
+<% end %>

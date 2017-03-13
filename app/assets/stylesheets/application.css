@@ -16,5 +16,6 @@
  *= require active_admin/editor/wysiwyg
  *= require fbtemplate
  *= require articles
+ *= require lessons
  *= require_self
  */

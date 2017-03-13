@@ -28,7 +28,11 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light"><%= t("welcome") %></span> Fundland
+                    <img src="/assets/logo.png" width="42" height="42">
+                    <!-- <i class="fa fa-play-circle"></i> <span class="light"><%= t("welcome") %></span> Fundland -->
+                </a>
+                <a class="navbar-brand page-scroll" href="#page-top" style="padding-top: 27px;">
+                    <span>FUNLAND</span>
                 </a>
             </div>
 
@@ -40,13 +44,43 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll button" href="#about">
+                            <span><%= t("why_funland") %></span>
+                        </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll button" href="#teacher">
+                            <span><%= t("teachers") %></span>
+                        </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll button" href="#student">
+                            <span><%= t("students") %></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll button" href="#contact">
+                            <span><%= t("contact") %></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button page-scroll" data-toggle="dropdown" href="#"><%= t("utilities") %>
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" class="button page-scroll">Practise at home</a></li>
+                              <li><a href="#" class="button page-scroll">For parent</a></li>
+                              <li><a href="#" class="button page-scroll">Center pictures</a></li>
+                            </ul>
+                    </li>
+                    <li class="pull-right language-icon">
+                        <%= link_to locale: "en" do %>
+                          <%= image_tag("en_flag_icon", size: "20x20") %>
+                        <% end %>
+                    </li>
+                    <li class="pull-right language-icon">
+                        <%= link_to locale: "vi" do %>
+                          <%= image_tag("vn_flag_icon", size: "20x20") %>
+                        <% end %>
                     </li>
                 </ul>
             </div>
@@ -56,77 +90,183 @@
     </nav>
 
     <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">English4Kids</h1>
-                        <p class="intro-text">Lk.
-                            <br>Created by Fundland.</p>
-
-                            <%= link_to(omniauth_authorize_path(:user, "facebook"), class: "btn btn-default btn-lg") do %>
-                              <i class="fa fa-facebook fa-fw"></i> <span class="network-name">Login in with facebook to study now!</span>
-                            <% end %>
-                        <br>
-                        <a href="#about" class="btn btn-circle page-scroll btn-default">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+  <ul class="bxslider" id="slider1">
+    <li><img src="/assets/1.jpg" alt="" height="650" width="100%" title=""></li>
+    <li><img src="/assets/2.jpg" alt="" height="650" width="100%" title=""></li>
+    <li><img src="/assets/3.jpg" alt="" height="650" width="100%" title=""></li>
+    <li><img src="/assets/4.jpg" alt="" height="650" width="100%" title=""></li>
+  </ul>
 
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Grayscale</h2>
+                <h2>About Funland</h2>
+                Khả năng phát âm chuẩn quốc tế với đội ngũ 100% giáo viên bản xứ giàu kinh nghiệm.
+
+                Khả năng sử dụng tiếng anh toàn diện với 4 kĩ năng Nghe, Nói, Đọc, Viêt được luyện tập linh hoạt.
+
+                Khả năng Tiếng Anh chuyên sâu và bài bản, đủ trình độ thi các chứng chỉ quốc tế như IELTS, TOEFL, SAT.
+
+                Các con ở các lớp nhỏ sẽ được ăn nhẹ trong giờ nghỉ.
+
                 <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
                 <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
                 <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
             </div>
         </div>
     </section>
-
     <!-- Download Section -->
-    <section id="download" class="content-section text-center">
+    <section id="teacher" class="text-center">
         <div class="download-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+              <div class="col-md-9">
+                <div class="row">
+                    <h2>Our teachers</h2>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div><div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div><div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div><div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div>
                 </div>
+              </div>
+              <div class="col-md-3">
+                  <p class="teachers-description">
+                    100% ĐỘI NGŨ GIÁO VIÊN BẢN NGỮ GIÀU KINH NGHIỆM VÀ YÊU NGHỀ
+                  </p>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="student" class="text-center">
+        <div class="download-section">
+            <div class="container">
+              <div class="col-md-9">
+                <div class="row">
+                    <h2>Our Outstanding Students</h2>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div><div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div><div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div><div class="col-lg-3 col-md-4 col-sm-6">
+                        <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= Article.first.content.html_safe %>">
+                            <img src="/assets/1.jpg" class="img-circle" alt="Cinque Terre">
+                            Tran Chinh Thuc
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                  <p class="teachers-description">
+                    Our student improved quickly after 3 months.
+                  </p>
+              </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
+
+    <section id="contact" class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
+            <div class="col-md-4">
+                <h2>Contact us</h2>
+                <ul class="contact-info">
+                    <li><span class="text-muteds">Email: </span>funland@gmail.com</li>
+                    <li><span class="text-muteds">Phone: </span>0466666666</li>
+                    <span class="title-base">Co So 1:</span>
+                        <li>xxx-Phu Lo-Soc Son-Ha Noi</li>
+                    <span class="title-base">Co so 2:</span>
+                        <li>xxx-Phu Lo-Soc Son-Ha Noi</li>
                 </ul>
+            </div>
+            <div class="col-md-8">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Youe Name:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="email" placeholder="Enter Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Your Email:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="pwd" placeholder="Enter Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Your Phone:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="pwd" placeholder="Enter Phone">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Your Message:</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control" rows="5" id="message"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Send</button>
+                    </div>
+                  </div>
+                </form>
             </div>
         </div>
     </section>
-
-    <div id="summernote">Hello Summernote</div>
 
     <%= render "shared/footer" %>
 
