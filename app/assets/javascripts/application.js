@@ -1690,7 +1690,7 @@ $( document ).ready(function() {
       alert("tuc");
     });
 
-    $('[data-toggle="popover"]').on('click', function (e) {
+    $('[data-toggle="popover"]').on('click tap', function (e) {
         //only buttons
         if ($(e.target).data('toggle') !== 'popover' && $(e.target).parents('.popover.in').length === 0) {
             $('[data-toggle="popover"]').popover('hide');
@@ -1703,5 +1703,9 @@ $( document ).ready(function() {
             $('[data-toggle="popover"]').popover('hide');
         }
         */
+    });
+
+    $("ul li a").on('click', function(e){
+      $("button.navbar-toggle").trigger('click');
     });
   });
