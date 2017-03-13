@@ -67,9 +67,9 @@
                         <a class="button page-scroll" data-toggle="dropdown" href="#"><%= t("utilities") %>
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="#" class="button page-scroll">Practise at home</a></li>
-                              <li><a href="#" class="button page-scroll">For parent</a></li>
-                              <li><a href="#" class="button page-scroll">Center pictures</a></li>
+                              <li><a href="#" class="button page-scroll"><%= t("practise_at_home") %></a></li>
+                              <li><a href="#" class="button page-scroll"><%= t("for_parent") %></a></li>
+                              <li><a href="#" class="button page-scroll"><%= t("pictures") %></a></li>
                             </ul>
                     </li>
                     <li class="pull-right language-icon">
@@ -91,10 +91,10 @@
 
     <!-- Intro Header -->
   <ul class="bxslider" id="slider1">
-    <li><img src="/assets/1.jpg" alt="" height="650" width="100%" title=""></li>
-    <li><img src="/assets/2.jpg" alt="" height="650" width="100%" title=""></li>
-    <li><img src="/assets/3.jpg" alt="" height="650" width="100%" title=""></li>
-    <li><img src="/assets/4.jpg" alt="" height="650" width="100%" title=""></li>
+    <li><%= image_tag("1", height: "650", width: "100%") %></li>
+    <li><%= image_tag("2", height: "650", width: "100%") %></li>
+    <li><%= image_tag("3", height: "650", width: "100%") %></li>
+    <li><%= image_tag("4", height: "650", width: "100%") %></li>
   </ul>
 
     <!-- About Section -->
@@ -102,18 +102,13 @@
         <div class="row">
             <div class="col-md-6">
 
-                <%= image_tag("program") %>
+                <%= image_tag("program", height: "100%", width: "100%") %>
 
             </div>
             <div class="col-md-6">
                 <h2>About Funland</h2>
 
-                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <%= Article.last.content.html_safe %>
             </div>
         </div>
     </section>
@@ -225,8 +220,8 @@
             <div class="col-md-4">
                 <h2>Contact us</h2>
                 <ul class="contact-info">
-                    <li><span class="text-muteds">Email: </span>funland@gmail.com</li>
-                    <li><span class="text-muteds">Phone: </span>0466666666</li>
+                    <li><span class="text-muted">Email: </span>funland@gmail.com</li>
+                    <li><span class="text-muted">Phone: </span>0466666666</li>
                     <span class="title-base">Co So 1:</span>
                         <li>xxx-Phu Lo-Soc Son-Ha Noi</li>
                     <span class="title-base">Co so 2:</span>
