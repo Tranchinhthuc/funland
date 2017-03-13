@@ -1666,7 +1666,20 @@ $( document ).ready(function() {
       };
       $(".infopoint").popover(options);
 
-    $('[data-toggle="popover"]').popover({ html : true, placement : options})
+    // $('[data-toggle="popover"]').popover({ html : true, placement : options})
+
+    $('[data-toggle="popover"]').popover({
+        // offset: 10,
+        animate: false,
+        html: true,
+        placement: options,
+        //<h3 class="popover-title"></h3>
+        //Need to have this click check since the tooltip will not close on mobile
+        }).click(function(e) {
+            jQuery(document).one("click", function() {
+                $('.Example').popover('hide')
+        });
+    });
 
     $("body").on("tap",function(){
       $('[data-toggle="popover"]').popover('hide');
