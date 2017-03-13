@@ -1670,13 +1670,15 @@ $( document ).ready(function() {
     //   alert("tuc");
     // });
     var trigger_type = '';
+    var position = '';
     if($(window).width() <= 768){
       trigger_type = 'click';
+      position = 'bottom'
     } else{
       trigger_type = 'hover';
     }
 
-    $('.teacher-name').popover({trigger: (trigger_type), placement: '', html: true});
+    $('.teacher-name').popover({trigger: (trigger_type), placement: position, html: true});
     $('body').on('click', function (e) {
       $('[data-toggle="popover"]').each(function () {
           //the 'is' for buttons that trigger popups
