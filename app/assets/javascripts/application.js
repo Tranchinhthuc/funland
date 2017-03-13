@@ -1668,21 +1668,21 @@ $( document ).ready(function() {
 
     // $('[data-toggle="popover"]').popover({ html : true, placement : options})
 
-    $('[data-toggle="popover"]').popover({
+    $('.teacher-name').popover({
         // offset: 10,
         animate: false,
         html: true,
-        placement: options,
+        placement: "",
         //<h3 class="popover-title"></h3>
         //Need to have this click check since the tooltip will not close on mobile
         }).click(function(e) {
             jQuery(document).one("click", function() {
-                $('.Example').popover('hide')
+                $('.teacher-name').popover('hide')
         });
     });
 
-    $("body").on("tap",function(){
-      $('[data-toggle="popover"]').popover('hide');
+    $("body").scroll(function(){
+        console.log("scroll");
     });
 
     $('.popover').on("tap",function(){
@@ -1690,19 +1690,11 @@ $( document ).ready(function() {
       alert("tuc");
     });
 
-    $('[data-toggle="popover"]').on('click tap', function (e) {
+    $('[data-toggle="popover"]').on('click', function (e) {
         //only buttons
         if ($(e.target).data('toggle') !== 'popover' && $(e.target).parents('.popover.in').length === 0) {
             $('[data-toggle="popover"]').popover('hide');
         }
-        //buttons and icons within buttons
-        /*
-        if ($(e.target).data('toggle') !== 'popover'
-            && $(e.target).parents('[data-toggle="popover"]').length === 0
-            && $(e.target).parents('.popover.in').length === 0) {
-            $('[data-toggle="popover"]').popover('hide');
-        }
-        */
     });
 
     $("ul li a").on('click', function(e){
