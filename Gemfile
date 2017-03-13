@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'summernote-rails'
+gem 'pg'
 gem 'bootstrap-sass'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
@@ -71,3 +72,4 @@ gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resour
 gem 'config'
 gem "i18n-js", ">= 3.0.0.rc11"
 gem "awesome_print"
+gem 'rails_12factor', group: :production
