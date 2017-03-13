@@ -1674,6 +1674,7 @@ $( document ).ready(function() {
 
     $('.popover').on("tap",function(){
       $('[data-toggle="popover"]').popover('hide');
+      alert("tuc");
     });
 
     $('[data-toggle="popover"]').on('click', function (e) {
