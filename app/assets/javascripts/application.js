@@ -1673,7 +1673,7 @@ $( document ).ready(function() {
     var position = '';
     if($(window).width() <= 768){
       trigger_type = 'click';
-      position = 'bottom'
+      // position = 'bottom';
     } else{
       trigger_type = 'hover';
     }
