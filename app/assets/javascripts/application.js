@@ -1667,10 +1667,9 @@ $( document ).ready(function() {
       $(".infopoint").popover(options);
 
     $('[data-toggle="popover"]').popover({ html : true, placement : options})
-    $('body').on('click', function (e) {
+    $('[data-toggle="popover"]').on('click', function (e) {
         //only buttons
-        if ($(e.target).data('toggle') !== 'popover'
-            && $(e.target).parents('.popover.in').length === 0) {
+        if ($(e.target).data('toggle') !== 'popover' && $(e.target).parents('.popover.in').length === 0) {
             $('[data-toggle="popover"]').popover('hide');
         }
         //buttons and icons within buttons
