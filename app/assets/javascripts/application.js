@@ -1645,59 +1645,51 @@ $( document ).ready(function() {
       mode: 'fade',
       captions: true
       });
-      var options = {
-          placement: function (context, source) {
-              var position = $(source).position();
-
-              if (position.left > 515) {
-                  return "left";
-              }
-
-              if (position.left < 515) {
-                  return "right";
-              }
-
-              if (position.top < 110){
-                  return "bottom";
-              }
-
-              return "top";
-          }
-      };
-      $(".infopoint").popover(options);
 
     // $('[data-toggle="popover"]').popover({ html : true, placement : options})
 
-    $('.teacher-name').popover({
-        // offset: 10,
-        animate: false,
-        html: true,
-        placement: "",
-        //<h3 class="popover-title"></h3>
-        //Need to have this click check since the tooltip will not close on mobile
-        }).click(function(e) {
-            jQuery(document).one("click", function() {
-                $('.teacher-name').popover('hide')
-        });
-    });
+    // $('.teacher-name').popover({
+    //     // offset: 10,
+    //     animate: false,
+    //     html: true,
+    //     placement: "",
+    //     //<h3 class="popover-title"></h3>
+    //     //Need to have this click check since the tooltip will not close on mobile
+    //     }).click(function(e) {
+    //         jQuery(document).one("click", function() {
+    //             $('.teacher-name').popover('hide')
+    //     });
+    // });
 
-    $("body").scroll(function(){
-        console.log("scroll");
-    });
+    // $("body").scroll(function(){
+    //     console.log("scroll");
+    // });
 
-    $('.popover').on("tap",function(){
-      $('[data-toggle="popover"]').popover('hide');
-      alert("tuc");
-    });
+    // $('.popover').on("tap",function(){
+    //   $('[data-toggle="popover"]').popover('hide');
+    //   alert("tuc");
+    // });
+    var trigger_type = '';
+    if($(window).width() <= 768){
+      trigger_type = 'click';
+    } else{
+      trigger_type = 'hover';
+    }
 
-    $('[data-toggle="popover"]').on('click', function (e) {
-        //only buttons
-        if ($(e.target).data('toggle') !== 'popover' && $(e.target).parents('.popover.in').length === 0) {
-            $('[data-toggle="popover"]').popover('hide');
-        }
-    });
+    $('.teacher-name').popover({trigger: (trigger_type), placement: '', html: true});
+    $('body').on('click', function (e) {
+      $('[data-toggle="popover"]').each(function () {
+          //the 'is' for buttons that trigger popups
+          //the 'has' for icons within a button that triggers a popup
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+          }
+      });
+  });
 
     $("ul li a").on('click', function(e){
-      $("button.navbar-toggle").trigger('click');
+      if($(window).width() <= 768){
+        $("button.navbar-toggle").trigger('click');
+      }
     });
   });
