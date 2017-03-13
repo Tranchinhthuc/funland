@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'summernote-rails'
+gem 'pg'
 gem 'bootstrap-sass'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
