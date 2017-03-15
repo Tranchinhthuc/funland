@@ -50,11 +50,11 @@ a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #CCFFCC;
+  background-color: #ff9900;
 }
 .navbar-custom .navbar-toggle {
   color: white;
-  background-color: rgba(254, 154, 0, 1);
+  background-color: #00ff00;
   font-size: 12px;
   margin-top: 18px;
 }
@@ -81,7 +81,7 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background-color: #E0E0E0;
+    background-color: orange;
     // background: linear-gradient(yellow, #E0E0E0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -102,9 +102,14 @@ a:focus {
 }
 
 #about {
-  background: url(aboutbg.jpg) repeat bottom center scroll;
+  .rectangle {
+    margin-bottom: 25px;
+  }
+  padding-bottom: 100px;
+  // background: url(aboutbg.jpg) repeat bottom center scroll;
+  background-image: url(aboutbg.jpg);
   // p, li{
-    color: red;
+    color: black;
   // }
 }
 
@@ -201,8 +206,8 @@ a:focus {
 .download-section {
   width: 100%;
   padding: 50px 0;
-  color: white;
-  background: url(aboutbg.jpg) no-repeat bottom center scroll;
+  color: black;
+  background-image: url(aboutbg.jpg);
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -275,7 +280,12 @@ ul.banner-social-buttons {
   .popover{
     top: 100px !important;; /* Max Width of the popover (depending on the container!) */
   }
+
 }
+  .visible-mobile {
+    display: none !important;
+  }
+
 footer {
   padding: 50px 0;
   background-color: #ccc;
@@ -333,6 +343,7 @@ body {
 }
 .bxslider {
   margin: 0;
+  margin-top: 45px;
   padding: 0;
 }
 ul.bxslider {
@@ -431,10 +442,10 @@ ul.bxslider {
   height: 32px;
   // text-indent: -9999px;
   // z-index: 9999;
-  background-color: black;
+  background-color: #00ff00;
   padding-top: 5px;
   padding-left: 10px;
-  color: white;
+  color: black;
 }
 .bx-wrapper .bx-controls-direction a:hover{
   background-color: orange;
@@ -514,7 +525,7 @@ ul.bxslider {
 .popover-title {
     color: white;
     font-size: 15px;
-    background-color: orange;
+    background-color: #00ff00;
 }
 
 .popover{
@@ -522,7 +533,7 @@ ul.bxslider {
 }
 .popover-content {
     background: url(cloudbg.jpg) no-repeat bottom center scroll;
-    color: orange;
+    color: black;
     font-size: 10px;
     overflow:hidden;
     display: inline-block;

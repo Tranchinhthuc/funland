@@ -17,5 +17,6 @@
  *= require fbtemplate
  *= require articles
  *= require lessons
+ *= require courses
  *= require_self
  */

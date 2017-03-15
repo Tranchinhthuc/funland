@@ -1,13 +1,16 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Sansita+One);
 
+// ff9900 : orange
+// 00ff00: green
+
 #container {
   background-color:#fff;
 }
 
 .button {
   position: relative;
-  background-color:#ccffcc;
+  background-color:white;
   color: #000000;
   // font-family: 'Sansita One', cursive;
   font-family: 'Tangerine';
@@ -24,9 +27,9 @@
   -moz-border-radius: 12px;
   border-radius: 12px;
 
-  -webkit-box-shadow: 0px 15px 0px orange, 0px 10px 25px rgba(0,0,0,.5);
-  -moz-box-shadow: 0px 15px 0px orange, 0px 10px 25px rgba(0,0,0,.5);
-  box-shadow: 0px 15px 0px orange, 0px 10px 25px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0px 15px 0px #00FF00, 0px 10px 25px rgba(0,0,0,.5);
+  -moz-box-shadow: 0px 15px 0px #00FF00, 0px 10px 25px rgba(0,0,0,.5);
+  box-shadow: 0px 15px 0px #00FF00, 0px 10px 25px rgba(0,0,0,.5);
 
   // margin: 50px auto;
 
@@ -40,4 +43,36 @@
   box-shadow: 0px 3px 0px #33CC33, 0px 3px 6px rgba(0,0,0,.9);
   position: relative;
   top: 10px;
+}
+
+#main-nav{
+  top: 30px;
+}
+
+.small-nav{
+  top: 0;
+  height: 50px;
+  clear: both;
+  background-color: #ff9900;
+  .dropdown{
+    float: right;
+  }
+  .fa {
+    font-size: 35px;
+  }
+  .fa-twitter-square {
+    color: green;
+  }
+
+  .fa-facebook-official{
+    color: blue;
+  }
+
+  .fa-youtube-square{
+    color: #F91621;
+  }
+  li a.social-btn{
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
 }

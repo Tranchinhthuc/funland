@@ -1,8 +1,14 @@
 function collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        // $(".navbar-fixed-top").css({position: "fixed"});
+        $("#main-nav").css({top: 0});
+        $(".small-nav").hide();
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        // $(".navbar-fixed-top").css({position: "inherit"});
+        $("#main-nav").css({top: 35});
+        $(".small-nav").show();
     }
 }
 
