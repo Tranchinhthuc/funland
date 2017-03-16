@@ -1,0 +1,50 @@
+<%= form_for :trial_registration, url: trial_registrations_path, method: :post, html: {class: "form-horizontal"} do |f| %>
+  <div class="form-group">
+    <label class="control-label col-sm-3" for="email"><%= t("your_name") %></label>
+    <div class="col-sm-6">
+      <%= f.text_field :kid_name, class: "form-control", placeholder: "Enter Name", required: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-3" for="pwd"><%= t("your_phone") %></label>
+    <div class="col-sm-6">
+      <%= f.text_field :phone, class: "form-control", placeholder: "Enter Phone", required: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-3" for="email"><%= t("your_email") %></label>
+    <div class="col-sm-6">
+      <%= f.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sel1" class="col-sm-3 control-label"><%= t("select_course_type") %></label>
+    <div class="col-sm-6">
+        <%= f.select(:course_id, @courses.collect {|c| [c.name, c.id]}, {}, {class: "form-control"}) %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sel1" class="col-sm-3 control-label"><%= t("select_center") %></label>
+    <div class="col-sm-6">
+        <%= f.select(:branch_id, Branch.all.collect {|b| [b.info, b.id]}, {}, {class: "form-control"}) %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-3" for="pwd"><%= t("your_message") %></label>
+    <div class="col-sm-8">
+      <%= f.text_area(:message, rows: 5, class: "form-control") %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit t("register"), class:"btn btn-success" %>
+      <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("cancel") %></button>
+    </div>
+  </div>
+<% end %>

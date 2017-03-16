@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316041542) do
+ActiveRecord::Schema.define(version: 20170316103235) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -52,6 +52,14 @@ ActiveRecord::Schema.define(version: 20170316041542) do
     t.datetime "updated_at",                             null: false
     t.integer  "article_type",               default: 1, null: false
     t.integer  "status",                     default: 1, null: false
+  end
+
+  create_table "branches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.text     "address",    limit: 65535
+    t.string   "phone"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -134,6 +142,17 @@ ActiveRecord::Schema.define(version: 20170316041542) do
     t.string   "avatar"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+  end
+
+  create_table "trial_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "kid_name"
+    t.string   "email"
+    t.string   "phone"
+    t.integer  "course_id"
+    t.integer  "branch_id"
+    t.text     "message",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -1,4 +1,7 @@
 class Course < ApplicationRecord
+  validates :name, presence: true
+  has_many :trial_registrations
+
   enum status: {
     inactive: 2,
     active: 1

@@ -1,4 +1,6 @@
 class GeneralDescription < ApplicationRecord
+  validates :content, presence: true
+
   enum status: {
     active: 1,
     inactive: 2
