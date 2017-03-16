@@ -6,7 +6,7 @@ ActiveAdmin.register GeneralDescription do
     f.inputs do
       f.input :status
       f.input :description_for
-      f.input :content, as: :html_editor
+      f.input :content, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } }
     end
     f.actions
   end

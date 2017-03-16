@@ -1,5 +1,8 @@
 <ul class="bxslider" id="slider1">
-  <% Slide.active.first.slide_pictures.each do |picture| %>
-    <li><%= image_tag(picture.picture.url, height: "650", width: "100%") %></li>
+  <% pictures = Slide.active.first.slide_pictures %>
+  <% if pictures %>
+    <% pictures.each do |picture| %>
+      <li><%= image_tag(picture.picture.url, height: "650", width: "100%") %></li>
+    <% end %>
   <% end %>
 </ul>

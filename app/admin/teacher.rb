@@ -7,7 +7,7 @@ ActiveAdmin.register Teacher do
       f.input :status
       f.input :fullname
       f.input :avatar
-      f.input :description, as: :html_editor
+      f.input :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } }
     end
     f.actions
   end
