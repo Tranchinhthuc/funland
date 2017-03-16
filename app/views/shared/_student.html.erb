@@ -1,0 +1,26 @@
+<section id="student">
+    <div class="download-section">
+        <div class="container">
+          <div class="col-md-9">
+            <div class="row">
+                <% @students.each do |student| %>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                      <p class="teacher-name" title="Helen" data-toggle="popover" data-trigger="hover" data-content="<%= student.description.html_safe %>">
+                          <%= image_tag(student.avatar.url, class: "img-circle") %>
+                          <%= student.fullname %>
+                      </p>
+                  </div>
+                <% end %>
+            </div>
+          </div>
+          <div class="col-md-3">
+              <div class="bubble">
+                  <div class="rectangle"><h2><%= t("students") %></h2></div>
+                  <div class="info">
+                    <%= @general_descriptions.student.first.try(:content).try(:html_safe) %>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>

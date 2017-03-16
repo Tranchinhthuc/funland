@@ -10,8 +10,10 @@
     color: #fff !important;
     padding-top: 12px !important;
   }
-  .col-md-8 .rectangle h2 {
+  .rectangle h2.long-title {
     font-size: 15px !important;
+    text-align: left;
+    padding: 10px;
   }
   .courses .row .course-box-title {
     width: 100%;

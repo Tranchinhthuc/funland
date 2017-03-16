@@ -1,0 +1,149 @@
+<nav class="navbar navbar-custom navbar-fixed-top" id="main-nav" role="navigation">
+    <nav class="small-nav navbar-fixed-top">
+        <div class="container">
+            <div class="">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a data-toggle="dropdown" href="#"><%= t("new_events") %>
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="" href="#">
+                                    <span><%= t("internal_news") %></span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="" href="#">
+                                    <span><%= t("external_news") %></span>
+                                </a>
+                              </li>
+                            </ul>
+                    </li>
+                    <li>
+
+                        <a data-toggle="dropdown" href="#" class="social-btn">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="dropdown" href="#" class="social-btn">
+                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="dropdown" href="#" class="social-btn">
+                            <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <img src="/assets/logo.png" width="42" height="42">
+                <!-- <i class="fa fa-play-circle"></i> <span class="light"><%= t("welcome") %></span> Fundland -->
+            </a>
+            <a class="navbar-brand page-scroll" href="#page-top" style="padding-top: 27px;">
+                <span>FUNLAND</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+
+                <li>
+                    <a class="page-scroll button" href="#about">
+                        <span><%= t("why_funland") %></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="button page-scroll" data-toggle="dropdown" href="#"><%= t("courses") %>
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="page-scroll button" href="#active-learning">
+                                <span><%= t("active_learning") %></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="page-scroll button" href="#kindergarten">
+                                <span><%= t("kindergarten") %></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="page-scroll button" href="#primary">
+                                <span><%= t("primary") %></span>
+                            </a>
+                          </li>
+                        </ul>
+                </li>
+
+                <li>
+                    <a class="page-scroll button" href="#teacher">
+                        <span><%= t("teachers") %></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="page-scroll button" href="#student">
+                        <span><%= t("students") %></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="page-scroll button" href="#contact">
+                        <span><%= t("contact") %></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="button page-scroll" data-toggle="dropdown" href="#"><%= t("utilities") %>
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#" class="button page-scroll"><%= t("practise_at_home") %></a></li>
+                          <li><a href="#" class="button page-scroll"><%= t("for_parent") %></a></li>
+                          <li><a href="#" class="button page-scroll"><%= t("pictures") %></a></li>
+                        </ul>
+                </li>
+
+
+                <li class="pull-left language-icon visible-mobile">
+                    <a href="https://facebook.com" class="social-btn">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="pull-left language-icon visible-mobile">
+                    <a href="https://facebook.com" class="social-btn">
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="pull-left language-icon visible-mobile">
+                    <a href="https://facebook.com" class="social-btn">
+                        <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="pull-right language-icon">
+                    <%= link_to locale: "en" do %>
+                      <%= image_tag("en_flag_icon", size: "20x20") %>
+                    <% end %>
+                </li>
+                <li class="pull-right language-icon">
+                    <%= link_to locale: "vi" do %>
+                      <%= image_tag("vn_flag_icon", size: "20x20") %>
+                    <% end %>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

@@ -1,0 +1,17 @@
+<section id="about" class="container content-section">
+    <div class="row">
+        <div class="col-md-6">
+
+            <%= image_tag("program", height: "100%", width: "100%") %>
+
+        </div>
+        <div class="col-md-6">
+            <div class="bubble">
+
+            <div class="rectangle course-box-title"><h2 class="long-title"><%= t("about_funland") %></h2></div>
+            <div class="info">
+                <%= @general_descriptions.about.first.try(:content).try(:html_safe) %>
+            </div>
+        </div>
+    </div>
+</section>

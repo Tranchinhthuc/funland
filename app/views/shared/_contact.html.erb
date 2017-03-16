@@ -1,0 +1,64 @@
+<section id="contact" class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="rectangle" style="margin-bottom: 20px"><h2 style="text-align: left; padding: 10px;"><%= t("contact_us") %></h2></div>
+            <%= @general_descriptions.contact.first.try(:content).try(:html_safe) %>
+        </div>
+        <div class="col-md-8">
+            <div class="rectangle" style="margin-bottom: 20px"><h2 class="long-title"><%= t("free_trial") %></h2></div>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="email"><%= t("your_name") %></label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="email" placeholder="Enter Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="pwd"><%= t("your_email") %></label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="pwd" placeholder="Enter Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="pwd"><%= t("your_phone") %></label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="pwd" placeholder="Enter Phone">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sel1" class="col-sm-3 control-label"><%= t("select_course_type") %></label>
+                <div class="col-sm-6">
+                    <select class="form-control" id="sel1">
+                      <option>Starter</option>
+                      <option>Intensive</option>
+                      <option>Super Star</option>
+                      <option>Great Reader</option>
+                      <option>Tiếng Anh tiểu học</option>
+                    </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sel1" class="col-sm-3 control-label"><%= t("select_center") %></label>
+                <div class="col-sm-6">
+                    <select class="form-control" id="sel1">
+                      <option>Cơ sở 1: Phủ Lỗ</option>
+                      <option>Cơ sở 2: Kim Lũ</option>
+                      <option>Cơ sở 3: Xuân Giang</option>
+                    </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="pwd"><%= t("your_message") %></label>
+                <div class="col-sm-8">
+                  <textarea class="form-control" rows="5" id="message"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-6">
+                  <button type="submit" class="btn btn-success" style="background-color: #00FF00; color: black"><%= t("register") %></button>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+</section>
