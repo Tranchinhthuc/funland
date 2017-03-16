@@ -31,7 +31,7 @@ ActiveAdmin.register Lesson do
       f.input :level, as: :select, collection: Lesson.levels.collect{|k, v| [Lesson.level_to_string(k.to_sym), k]}, :prompt => "--Select level--", include_blank: true
       f.input :age, as: :select, collection: Lesson.ages.collect{|k, v| [Lesson.age_to_string(k.to_sym), k]}, :prompt => "--Select age--", include_blank: true
       f.input :word_ids, as: :check_boxes, collection: Word.all, member_label: Proc.new { |w| "#{w.origin} (#{w.meaning})" }, label: "Words"
-      f.input :description, as: :html_editor
+      f.input :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } }
     end
     f.actions
   end

@@ -28,7 +28,7 @@ ActiveAdmin.register Article do
     f.inputs do
       f.input :author_id, as: :select, collection: AdminUser.all.map{|u| [u.email, u.id]}, :input_html => { :value => current_admin_user.id}, include_blank: false
       f.input :title
-      f.input :content, as: :html_editor
+      f.input :content, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } }
     end
     f.actions
   end

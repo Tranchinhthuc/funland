@@ -7,7 +7,7 @@ ActiveAdmin.register Course do
       f.input :name
       f.input :course_type
       f.input :status
-      f.input :description, as: :html_editor
+      f.input :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } }
     end
     f.actions
   end
