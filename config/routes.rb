@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :articles, only: [:index, :show]
   resources :lessons, only: [:index, :show]
+  resources :trial_registrations
 
   devise_scope :user do
     authenticated :user do
