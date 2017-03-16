@@ -20,9 +20,9 @@
         <% @courses.kindergarten.each do |course| %>
           <div class="col-md-3 col-sm-6 course-box">
               <div class="bubble">
-                  <div class="rectangle"><h2><%= courses.name %></h2></div>
+                  <div class="rectangle"><h2><%= course.name %></h2></div>
                   <div class="info">
-                    <%= courses.description.try(:html_safe) %>
+                    <%= course.description.try(:html_safe) %>
                   </div>
               </div>
           </div>
