@@ -74,3 +74,4 @@ gem "i18n-js", ">= 3.0.0.rc11"
 gem "awesome_print"
 gem 'rails_12factor', group: :production
 gem "ckeditor"
+gem 'cloudinary'

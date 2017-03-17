@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: thuccolinblog
+  api_key: '283728328378673'
+  api_secret: Je3vsxWqMdQZtNgkkudqe0Z7X3Q
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: thuccolinblog
+  api_key: '283728328378673'
+  api_secret: Je3vsxWqMdQZtNgkkudqe0Z7X3Q
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: thuccolinblog
+  api_key: '283728328378673'
+  api_secret: Je3vsxWqMdQZtNgkkudqe0Z7X3Q
+  enhance_image_tag: true
+  static_image_support: false
